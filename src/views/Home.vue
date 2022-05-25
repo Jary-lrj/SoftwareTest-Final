@@ -5,16 +5,23 @@
         style="
           float: left;
           display: flex;
-          font-size: 24px;
-          font-weight: bold;
-          border: 1px solid #ebeef5;
-          vertical-align: middle;
           height: 7.5vh;
-          line-height: 7.5vh;
+          border: 1px solid #ebeef5;
         "
-        >软件测试工具
-        </el-header
-      >
+        ><span
+          style="
+            line-height: 7.5vh;
+            font-size: 26px;
+            font-weight: bold;
+            margin: 0 20px 0 20px;
+          "
+          >软件测试工具</span
+        >
+        <span class="nav-bar" @click="this.$router.push('/')">练习测试</span>
+        <span class="nav-bar" @click="this.$router.push('/system')"
+          >系统测试</span
+        >
+      </el-header>
       <el-container>
         <el-aside width="15vw" style="">
           <div
@@ -77,7 +84,7 @@
 </template>
 
 <script>
-import Task1 from "../components/Task1.vue";
+import Task1 from '../components/Task1.vue'
 export default {
   components: {
     Task1,
@@ -86,15 +93,15 @@ export default {
     return {
       task_num: 1,
       exercise_task: [
-        { label: "1-判断三角形类型", value: 1 },
-        { label: "2-万年历问题", value: 2 },
-        { label: "4-电脑销售系统", value: 4 },
-        { label: "7-电信收费系统", value: 7 },
-        { label: "14-实时Web系统", value: 14 },
+        { label: '1-判断三角形类型', value: 1 },
+        { label: '2-万年历问题', value: 2 },
+        { label: '4-电脑销售系统', value: 4 },
+        { label: '7-电信收费系统', value: 7 },
+        { label: '14-实时Web系统', value: 14 },
       ],
-    };
+    }
   },
-};
+}
 </script>
 
 <style>
@@ -104,5 +111,15 @@ export default {
 .task-introduction {
   margin: 0 20px 0 20px;
   line-height: 30px;
+}
+.nav-bar {
+  line-height: 7.5vh;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 20px 0 30px;
+}
+.nav-bar:hover {
+  color: #409eff;
+  cursor: pointer;
 }
 </style>
